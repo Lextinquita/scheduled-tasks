@@ -2,10 +2,10 @@ import os
 import requests
 from twilio.rest import Client
 
-account_sid =  os.environ.get("ACCOUNT_SID")
-auth_token =  os.environ.get("AUTH_TOKEN")
-api_key =  os.environ.get("MY_KEY")
-MY_LAT =  os.environ.get("MY_LAT")
+account_sid = os.environ.get("ACCOUNT_SID")
+auth_token = os.environ.get("AUTH_TOKEN")
+api_key = os.environ.get("MY_KEY")
+MY_LAT = os.environ.get("MY_LAT")
 MY_LNG = os.environ.get("MY_LNG")
 
 parameters = {
