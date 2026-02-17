@@ -26,22 +26,59 @@ jobs:
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
         run: |
-          if [ -z "$MY_EMAIL" ]; then
-            echo "MY_EMAIL secret is not set!"
+          if [ -z "$ACCOUNT_SID" ]; then
+            echo "ACCOUNT_SID secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "MY_EMAIL is configured"
+            echo "ACCOUNT_SID is configured"
           fi
 
-          if [ -z "$MY_PASSWORD" ]; then
-            echo "MY_PASSWORD secret is not set!"
+          if [ -z "$AUTH_TOKEN" ]; then
+            echo "AUTH_TOKEN secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "MY_PASSWORD is configured"
+            echo "AUTH_TOKEN is configured"
           fi
 
+          if [ -z "$MY_KEY" ]; then
+            echo "MY_KEY secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "MY_KEY is configured"
+          fi
+
+           if [ -z "$MY_LAT" ]; then
+            echo "MY_LAT secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "MY_LAT is configured"
+          fi
+          
+          if [ -z "$MY_LNG" ]; then
+            echo "MY_LNG secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "MY_LNG is configured"
+          fi
+          if [ -z "$MY_TO" ]; then
+            echo "MY_TO secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "MY_TO is configured"
+          fi
+          if [ -z "$MY_FROM" ]; then
+            echo "MY_FROM secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "MY_FROM is configured"
+          fi
           echo ""
           echo "All secrets are configured!"
 
@@ -60,13 +97,6 @@ jobs:
             echo "requirements.txt found"
           else
             echo "requirements.txt not found!"
-            exit 1
-          fi
-
-          if [ -f "birthdays.csv" ]; then
-            echo "birthdays.csv found"
-          else
-            echo "birthdays.csv not found!"
             exit 1
           fi
 
