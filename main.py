@@ -32,7 +32,7 @@ if weather_id_list:
     message = client.messages.create(
         from_= os.environ.get("MY_FROM"),
         body="It's going to rain today. Remember to bring an ☂️",
-        to=" os.environ.get("MY_TO"),
+        to= os.environ.get("MY_TO"),
     )
 
     print(message.status)
